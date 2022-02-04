@@ -1,6 +1,8 @@
 buildscript {
     ext {
         compose_version = '1.2.0-alpha02'
+        kotlin_version = '1.6.10'
+        dagger_version = '2.40.5'
     }
 
     repositories {
@@ -10,8 +12,9 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:7.1.0'
-        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10'
-        classpath 'com.google.dagger:hilt-android-gradle-plugin:2.40.5'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-serialization:$kotlin_version"
+        classpath "com.google.dagger:hilt-android-gradle-plugin:$dagger_version"
     }
 
 }
